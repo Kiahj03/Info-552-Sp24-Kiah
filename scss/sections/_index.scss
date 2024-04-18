@@ -1,0 +1,75 @@
+/* =============
+    Index
+============= */
+
+#index-hero{
+    margin: 32px 0px;
+    text-align: center;
+    >div {
+        padding: 0 16px;
+
+        p {
+            font-size: rem-calc(18);
+            color: var(--blue);
+            line-height: rem-calc(24);
+        }
+        button {
+            margin: 32px 0;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+#index-brand {
+
+}
+
+#index-planning {
+    padding: 32px 16px;
+    background-color: var(--aqua);
+    color: var(--green);
+    text-align: center;
+
+    p {
+        margin-bottom: 32px;
+        text-align: left;
+    }
+
+    #planning-hero {
+        width: 100%;
+    }
+
+    #planning-callout {
+        background-color: var(--green);
+        color: var(--blue);
+        text-align: center;
+        border-radius: 10px;
+        padding: 32px 0px;
+        width: 244px;
+        margin-top: -20px;
+
+        //future lectures
+        display: inline-block;
+        
+        #clock-container {
+            margin: 0 auto 26px;
+            height: 45px;
+            width: 45px;
+            background-color: var(--blue);
+            border-radius: 100%;
+            
+            //future lectures
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h3 {
+            font-size: rem-calc(25);
+            font-weight: 500;
+        }
+    }
+}
