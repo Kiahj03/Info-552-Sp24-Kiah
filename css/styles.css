@@ -15,6 +15,9 @@ html {
   --white: #ffffff;
 }
 
+/* =============
+    Normalize
+============= */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -334,6 +337,16 @@ template {
 /* =============
     Typography
 ============= */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+}
+
 /* =============
     Buttons
 ============= */
