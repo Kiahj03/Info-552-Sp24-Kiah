@@ -21,6 +21,15 @@
     img {
         width: 100%;
     }
+
+    #index-hero-image {
+        height: 500px;
+        background-image: url('../img/home/hero.jpg');
+        background-size: cover;
+        //x = right | center | left
+        //y = top | center | bottom
+        background-position: center;
+    }
 }
 
 #index-brand {
@@ -39,7 +48,10 @@
     }
 
     #planning-hero {
-        width: 100%;
+        background-image: url('../img/home/planning/planning.jpg');
+        height: 360px;
+        background-size: cover;
+        border-radius: 10px;
     }
 
     #planning-callout {
