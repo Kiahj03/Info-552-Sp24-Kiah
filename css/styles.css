@@ -455,8 +455,18 @@ footer > div h2 {
   font-weight: 600;
   margin-bottom: 8px;
 }
+@media (min-width: 768px) {
+  footer > div h2 {
+    margin-bottom: 16px;
+  }
+}
 footer > div form {
   width: 85vw;
+}
+@media (min-width: 768px) {
+  footer > div form {
+    width: 50vw;
+  }
 }
 footer > div form > div {
   display: -webkit-box;
@@ -501,7 +511,7 @@ footer > div form > div button {
   margin-left: auto;
 }
 footer > div ul {
-  padding: 32px 12vw 16px;
+  padding: 32px 6vw 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -524,6 +534,11 @@ footer > div ul li a {
 #index-hero > div {
   padding: 0 16px;
 }
+@media (min-width: 768px) {
+  #index-hero > div {
+    padding: 0 56px;
+  }
+}
 #index-hero > div p {
   font-size: 1.125rem;
   color: var(--blue);
@@ -532,14 +547,17 @@ footer > div ul li a {
 #index-hero > div button {
   margin: 32px 0;
 }
-#index-hero img {
-  width: 100%;
-}
 #index-hero #index-hero-image {
+  height: 70vh;
   height: 500px;
   background-image: url("../img/home/hero.jpg");
   background-size: cover;
   background-position: center;
+}
+@media (min-width: 768px) {
+  #index-hero #index-hero-image {
+    height: 60vh;
+  }
 }
 
 #index-planning {
@@ -548,15 +566,31 @@ footer > div ul li a {
   color: var(--green);
   text-align: center;
 }
+#index-planning h1 {
+  text-align: left;
+}
 #index-planning p {
   margin-bottom: 32px;
   text-align: left;
+}
+@media (min-width: 768px) {
+  #index-planning p {
+    padding-right: 30vw;
+    fontsize: 1.25rem;
+    line-height: 25px;
+  }
 }
 #index-planning #planning-hero {
   background-image: url("../img/home/planning/planning.jpg");
   height: 360px;
   background-size: cover;
   border-radius: 10px;
+}
+@media (min-width: 768px) {
+  #index-planning #planning-hero {
+    width: 80vw;
+    height: 50vh;
+  }
 }
 #index-planning #planning-callout {
   background-color: var(--green);
@@ -591,6 +625,11 @@ footer > div ul li a {
 
 #index-weather {
   padding: 32px 16px;
+}
+@media (min-width: 768px) {
+  #index-weather {
+    padding: 32px 20vw;
+  }
 }
 #index-weather h1 {
   color: var(--blue);
