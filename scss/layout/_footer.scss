@@ -28,4 +28,13 @@ footer {
             padding: 16px;
         }
     }
+
+    ul {
+        li {
+            a {
+                color: var(--white);
+                font-size: rem-calc(60);
+            }
+        }
+    }
 }

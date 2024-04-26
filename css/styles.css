@@ -463,6 +463,10 @@ footer form button {
   background-color: var(--red);
   padding: 16px;
 }
+footer ul li a {
+  color: var(--white);
+  font-size: 3.75rem;
+}
 
 /* =============
     Index
