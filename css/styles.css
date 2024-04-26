@@ -349,10 +349,6 @@ ul li {
   list-style: none;
 }
 
-.hide_img {
-  display: none;
-}
-
 /* =============
     Typography
 ============= */
@@ -434,10 +430,6 @@ textarea {
 /* =============
     Header
 ============= */
-header {
-  display: none;
-}
-
 /* =============
     Footer
 ============= */
@@ -447,23 +439,77 @@ footer {
   background-position: center bottom;
   color: var(--white);
   text-align: center;
-  padding-bottom: 32px;
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
-footer h2 {
-  padding-top: 200px;
+footer > div h2 {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
-footer form input {
+footer > div form {
+  width: 85vw;
+}
+footer > div form > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer > div form > div input {
   border-radius: 0;
   border: none;
+  width: 100%;
+  padding-left: 2%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.4588235294);
 }
-footer form button {
+footer > div form > div ::-webkit-input-placeholder {
+  color: var(--blueDark);
+  opacity: 1;
+}
+footer > div form > div ::-moz-placeholder {
+  color: var(--blueDark);
+  opacity: 1;
+}
+footer > div form > div :-ms-input-placeholder {
+  color: var(--blueDark);
+  opacity: 1;
+}
+footer > div form > div ::-ms-input-placeholder {
+  color: var(--blueDark);
+  opacity: 1;
+}
+footer > div form > div ::placeholder {
+  color: var(--blueDark);
+  opacity: 1;
+}
+footer > div form > div ::-ms-input-placeholder {
+  color: var(--blueDark);
+}
+footer > div form > div button {
   background-color: var(--red);
   padding: 16px;
+  margin-left: auto;
 }
-footer ul li a {
+footer > div ul {
+  padding: 32px 12vw 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer > div ul li a {
   color: var(--white);
   font-size: 3.75rem;
 }

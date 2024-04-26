@@ -8,32 +8,56 @@ footer {
     background-position: center bottom;
     color: var(--white);
     text-align: center;
-    padding-bottom: 32px;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 
-    h2 {
-        padding-top: 200px;
-        font-size: rem-calc(24);
-        font-weight: 600;
-        margin-bottom: 9px;
-    }
-
-    form {
-        input {
-            border-radius: 0;
-            border: none;
+    >div {
+        h2 {
+            font-size: rem-calc(24);
+            font-weight: 600;
+            margin-bottom: 8px;
         }
+    
+        form {
+            width: 85vw;
 
-        button {
-            background-color: var(--red);
-            padding: 16px;
+            >div {
+                display: flex;
+                input {
+                    border-radius: 0;
+                    border: none;
+                    width: 100%;
+                    padding-left: 2%;
+                    box-sizing: border-box;
+                    background-color: #ffffff75;
+                }
+                ::placeholder {
+                    color: var(--blueDark);
+                    opacity: 1;
+                }
+                ::-ms-input-placeholder {
+                    color: var(--blueDark);
+                }
+        
+                button {
+                    background-color: var(--red);
+                    padding: 16px;
+                    margin-left: auto;
+                }
+            }
         }
-    }
-
-    ul {
-        li {
-            a {
-                color: var(--white);
-                font-size: rem-calc(60);
+    
+        ul {
+            padding: 32px 12vw 16px;
+            display: flex;
+            justify-content: space-between;
+            li {
+                a {
+                    color: var(--white);
+                    font-size: rem-calc(60);
+                }
             }
         }
     }
