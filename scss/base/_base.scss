@@ -10,7 +10,31 @@ ul {
     }
 }
 .hide_img {
-    //display: none;
+    display: none;
+}
+
+.xxl-grid {
+    @include xxl {
+        display: grid;
+        grid-template-columns: auto 1140px auto;
+        grid-template-areas: ". xxl-content .";
+
+        .xxl-grid-item {
+            grid-area: xxl-content;
+        }
+    }
+}
+
+.xl-grid {
+    @include xl {
+        display: grid;
+        grid-template-columns: auto 1200px auto;
+        grid-template-areas: ". xl-content .";
+
+        .xl-grid-item {
+            grid-area: xxl-content;
+        }
+    }
 }
 
 

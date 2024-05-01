@@ -11,6 +11,15 @@
         @include md {
             padding: 0 56px;
         }
+
+        @include lg {
+            padding: 0 20vw;
+        }
+
+        @include xxl {
+            padding: 0 400px;
+        }
+
         p {
             font-size: rem-calc(18);
             color: var(--blue);
@@ -20,23 +29,75 @@
             margin: 32px 0;
         }
     }
+}
 
-    #index-hero-image {
-        height: 70vh;
-        height: 500px;
-        background-image: url('../img/home/hero.jpg');
-        background-size: cover;
-        //x = right | center | left
-        //y = top | center | bottom
-        background-position: center;
+#index-hero-image {
+    height: 70vh;
+    height: 500px;
+    background-image: url('../img/home/hero.jpg');
+    background-size: cover;
+    //x = right | center | left
+    //y = top | center | bottom
+    background-position: center;
 
-        @include md {
-            height: 60vh;
-        }
+    @include md {
+        height: 60vh;
+    }
+
+    @include lg {
+        background-position: center bottom;
+        height: 75vh;
     }
 }
 
+
 #index-brand {
+    padding: 32px 16px;
+    ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 26px;
+        grid-template-areas: 
+        "tnf tnf yeti yeti"
+        "columbia columbia coleman coleman"
+        ". patagonia patagonia .";
+
+        @include md {
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+            grid-template-areas: 
+            "tnf tnf yeti yeti columbia columbia"
+            ". coleman coleman patagonia patagonia .";
+        }
+
+        @include lg {
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-areas: 
+            "tnf yeti columbia coleman patagonia";
+        }
+
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #tnf {
+            grid-area: tnf;
+        }
+        #yeti {
+            grid-area: yeti;
+        }
+        #columbia {
+            grid-area: columbia;
+        }
+        #coleman {
+            grid-area: coleman;
+        }
+        #patagonia {
+            grid-area: patagonia;
+        }
+    }
 
 }
 
@@ -70,6 +131,14 @@
             width: 80vw;
             height: 50vh;
         }
+
+        @include lg {
+            margin-left: 200px;
+        }
+
+        @include xl {
+            width: 928px;
+        }
     }
 
     #planning-callout {
@@ -82,7 +151,7 @@
         margin-top: -20px;
 
         @include md {
-
+            // margin-top: -60px;
         }
 
         //future lectures
@@ -115,16 +184,53 @@
         padding: 32px 20vw;
     }
 
-    h1 {
-        color: var(--blue);
+    @include lg {
+        padding: 40px 20vw;
     }
 
-    h2 {
-        color: var(--aqua);
-        margin-bottom: 8px;
-    }
+    #index-weather-xl-grid {
+        @include xl {
+            display: grid;
+            grid-template-columns: 50% auto;
+            grid-template-areas: "weather-content weather-icons";
+            gap: 32px;
+        }
+
+        #weather-icons {
+            display: grid;
+            grid-template-columns: repeat(2, 2fr);
+            gap: 16px;
     
-    p {
-        margin-bottom: 24px;
+            @include md {
+                grid-template-columns: repeat(4, 2fr);
+                gap: 32px;
+                margin-bottom: 16px;
+            }
+
+            @include xl {
+                grid-area: weather-icons;
+            }
+    
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+    
+        }
+        #weather-content {
+            h1 {
+                color: var(--blue);
+            }
+        
+            h2 {
+                color: var(--aqua);
+                margin-bottom: 8px;
+            }
+            
+            p {
+                margin-bottom: 24px;
+            }
+        }
     }
 }
