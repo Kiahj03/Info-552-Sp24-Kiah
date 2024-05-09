@@ -1,0 +1,35 @@
+//Index
+
+#color-container {
+    // background-color: var(--black);
+    padding: 10px;
+    height: 100%;
+    #pink {
+        height: 100px;
+        background-color: var(--pink);
+    }
+    #purp {
+        height: 100px;
+        background-color: var(--purple);
+    }
+    #darkblue {
+        height: 100px;
+        background-color: var(--darkBlue);
+    }
+    #blue {
+        height: 100px;
+        background-color: var(--blue);
+    }
+    #aqua {
+        height: 100px;
+        background-color: var(--aqua);
+    }
+    #yellow {
+        height: 100px;
+        background-color: var(--yellow);
+    }
+    #green {
+        height: 100px;
+        background-color: var(--green);
+    }
+}
