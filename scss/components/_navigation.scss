@@ -1,3 +1,70 @@
 /* =============
     Navigation
 ============= */
+
+a {
+    text-decoration: none;
+}
+
+.hide-menu {
+    display: none;
+
+    @include md {
+        display: block;
+    }
+}
+#main-nav {
+    background-color: var(--blueDark);
+    color: var(--white);
+    padding: 16px;
+
+    @include md {
+        background-color: var(--white);
+        padding: 0 16px 0 0;
+        display: block;
+    }
+
+    @include lg {
+        grid-template-columns: 40% auto;
+    }
+
+    @include xl {
+        grid-template-columns: 45% auto;
+    }
+
+    @include xxl {
+        grid-template-columns: 50% auto;
+    }
+
+    ul {
+
+        @include md {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+        li {
+            text-align: right;
+            a:link, a:visited{
+                display: inline-block;
+                padding: 16px 0;
+                color: var(--white);
+                transition: 0.25s;
+
+                @include md {
+                    color: var(--blue);
+                }
+
+                i {
+                    color: var(--red);
+                    margin-right: 8px;
+                }
+            }
+        
+            a:hover, a:active {
+                color: var(--white);
+            }
+        }
+    }
+}

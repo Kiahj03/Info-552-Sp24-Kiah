@@ -3,5 +3,51 @@
 ============= */
 
 header {
-    //display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--white);
+
+    #header-container {
+        display: grid;
+        grid-template-columns: 20% auto;
+        grid-template-areas: 
+        "logo burger"
+        "nav nav";
+    
+        @include md {
+            grid-template-columns: 30% auto;
+            grid-template-areas: "logo nav";
+        }
+    
+        #logo-container {
+            padding: 16px 0 16px 16px;
+            grid-area: logo;
+        }
+    
+        #burger-container {
+            grid-area: burger;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+    
+            @include md {
+                display: none;
+            }
+    
+            button {
+                background-color: var(--white);
+                border: none;
+                color: var(--blue);
+                font-size: rem-calc(18);
+                padding: 16px;
+            }
+        }
+    
+        #main-nav {
+            grid-area: nav;
+        }
+    }
 }
