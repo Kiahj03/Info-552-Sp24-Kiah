@@ -9,7 +9,7 @@
 
     
 
-    @include xl{
+    @include lg{
         display: grid;
         grid-template-columns: auto 1200px auto;
         grid-template-areas: ". indexContent .";
@@ -23,14 +23,12 @@
             grid-template-areas: "indexLeftContainer indexRightContainer";
         }
 
-        @include xl{
+        @include lg{
             grid-area: indexContent;
         }
 
         .indexLeftContainer {
             padding: 24px 16px;
-            // width: 50%;
-            // margin: auto 20px;
 
             @include md{
                 grid-area: indexLeftContainer;

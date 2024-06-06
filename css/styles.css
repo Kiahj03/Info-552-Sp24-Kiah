@@ -398,119 +398,75 @@ textarea {
 /* =============
     Navigation
 ============= */
-.navigationWelcome {
-  font-family: "Pacifico", cursive;
-  font-weight: 400;
-  font-optical-sizing: auto;
+header {
+  width: 100%;
+  background-color: var(--white);
 }
-
-.navigationBar {
+header #header-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50% auto;
   grid-template-columns: 50% auto;
-      grid-template-areas: "navigationRightContainer burger-container" "navigationLeftContainer navigationLeftContainer";
+      grid-template-areas: "welcome burger" "nav nav";
 }
 @media (min-width: 1024px) {
-  .navigationBar {
+  header #header-container {
     -ms-grid-columns: 30% auto;
     grid-template-columns: 30% auto;
-        grid-template-areas: "navigationRightContainer navigationLeftContainer";
+        grid-template-areas: "welcome nav";
   }
 }
-.navigationBar .navigationRightContainer {
+header #header-container #welcome-container {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  grid-area: navigationRightContainer;
+  grid-area: welcome;
 }
-.navigationBar .navigationLeftContainer {
+header #header-container #welcome-container .navigationWelcome {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-optical-sizing: auto;
+}
+header #header-container #burger-container {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: burger;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (min-width: 1024px) {
+  header #header-container #burger-container {
+    display: none;
+  }
+}
+header #header-container #burger-container button {
+  background-color: transparent;
+  border: none;
+  color: var(--black);
+  font-size: 18px;
+}
+header #header-container #main-nav {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
-  grid-area: navigationLeftContainer;
-  display: none;
+  grid-area: nav;
 }
 @media (min-width: 1024px) {
-  .navigationBar .navigationLeftContainer {
-    display: block;
-  }
-}
-@media (min-width: 1024px) {
-  .navigationBar .navigationLeftContainer ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-}
-.navigationBar .navigationLeftContainer ul li {
-  list-style-type: none;
-  width: 100%;
-}
-@media (min-width: 768px) {
-  .navigationBar .navigationLeftContainer ul li {
-    margin-left: 24px;
-  }
-}
-.navigationBar .navigationLeftContainer ul li a:link, .navigationBar .navigationLeftContainer ul li a:visited {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-decoration: none;
-  color: var(--purple);
-  padding: 8px 0;
-}
-.navigationBar .navigationLeftContainer ul li a:link img, .navigationBar .navigationLeftContainer ul li a:visited img {
-  height: 20px;
-  margin-right: 8px;
-}
-.navigationBar .burger-container {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: burger-container;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-@media (min-width: 1024px) {
-  .navigationBar .navigationRightContainer {
+  header #header-container #welcome-container {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
   }
-  .navigationBar .navigationLeftContainer {
+  header #header-container #main-nav {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
   }
-}
-@media (min-width: 1024px) {
-  .navigationBar .burger-container {
-    display: none;
-  }
-}
-.navigationBar .burger-container button {
-  border: none;
-  background-color: transparent;
-}
-.navigationBar .burger-container button div {
-  background-color: black;
-  height: 3px;
-  width: 40px;
-  margin-bottom: 8px;
 }
 
 /* =============
@@ -526,7 +482,7 @@ header {
 #indexContainer {
   width: 100%;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   #indexContainer {
     display: -ms-grid;
     display: grid;
@@ -544,12 +500,12 @@ header {
         grid-template-areas: "indexLeftContainer indexRightContainer";
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   #indexContainer #indexContent {
     grid-area: indexContent;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   #indexContainer #indexContent {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
