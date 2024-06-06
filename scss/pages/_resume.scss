@@ -1,0 +1,48 @@
+/* =============
+    Resume
+============= */
+
+#resumeContainer{
+    width: 100%;
+    height: 445px;
+    display: flex;
+
+    .resumeLeftContainer {
+        width: 40%;
+        .resume {
+            height: 100%;
+            float: right;
+            padding: 0 20px;
+        }
+    }
+    .resumeMiddleContainer {
+        width: 20%;
+        display: flex;
+        button {
+            background-color: var(--purple);
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 12px;
+        }
+        .resumeButtonContainer {
+            height: 100%;
+            width: 50%;
+            margin: 150px 0;
+        }
+        .cvButtonContainer {
+            height: 100%;
+            width: 50%;
+            margin: 250px 3px;
+        }
+    }
+    .resumeRightContainer {
+        width: 40%;
+        .cv {
+            padding: 0 20px;
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,84 @@
+/* =============
+    Associations
+============= */
+
+#assocContainer {
+    width: 100%;
+    height: 445px;
+    h2 {
+        font-size: 20px;
+        a {
+            color: var(--white);
+        }
+    }
+    p {
+        font-size: 13px;
+        padding: 4px;
+    }
+    .assocTopContainer {
+        width: 100%;
+        height: 222.5px;
+        display: flex;
+        align-items: center;
+        .leftTop {
+            width: 450px;
+            height: 200px;
+            margin: 0 75px;
+            display: flex;
+            text-align: center;
+            background-color: var(--purple);
+            img {
+                height: 100%;
+                width: 200px;
+                object-fit: contain;
+            }
+        }
+        .rightTop {
+            width: 450px;
+            height: 200px;
+            margin: 0 120px;
+            display: flex;
+            text-align: center;
+            background-color: var(--purple);
+            img {
+                height: 100%;
+                width: 200px;
+                object-fit: contain;
+            }
+        }
+    }
+    .assocBottomContainer {
+        width: 100%;
+        height: 222.5px;
+        display: flex;
+        align-items: center;
+        .leftBottom {
+            width: 450px;
+            height: 200px;
+            margin: 0 75px;
+            display: flex;
+            text-align: center;
+            background-color: var(--purple);
+            img {
+                height: 100%;
+                width: 200px;
+                object-fit: contain;
+                background-color: var(--white);
+            }
+        }
+        .rightBottom {
+            width: 450px;
+            height: 200px;
+            margin: 0 120px;
+            display: flex;
+            text-align: center;
+            background-color: var(--purple);
+            img {
+                height: 100%;
+                width: 200px;
+                object-fit: contain;
+                background-color: var(--white);
+            }
+        }
+    }
+}

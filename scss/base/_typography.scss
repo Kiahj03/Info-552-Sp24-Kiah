@@ -1,0 +1,62 @@
+/* =============
+    Typography
+============= */
+
+h1,h2,h3,h4{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    background-color: var(--grey);
+}
+
+
+    // width: 100%;
+    // height: 70px;
+    // display: flex;
+    // background-color: var(--white);
+
+    // .navigationRightContainer {
+    //     padding-left: 20px;
+    //     width: 50%;
+    //     margin: auto;
+    // }
+    // .navigationLeftContainer {
+    //     padding-right: 20px;
+    //     width: 50%;
+    //     margin: auto;
+    // }
+    // ul {
+    //     list-style-type: none;
+    //     float: right;
+    // }
+    // li {
+    //     display: inline;
+    //     padding: 3px;
+    //     a {
+    //         img {
+    //             width: 30px;
+    //         }
+    //     }
+    // }
+
+.contactContainer {
+    width: 100%;
+    display: flex;
+    background-color: var(--white);
+    // position: fixed;
+    // bottom: 0;
+    height: 70px;
+    justify-content: center;
+
+    ul {
+        list-style-type: none;
+    }
+    li {
+        display: inline;
+        padding: 3px;
+    }
+}

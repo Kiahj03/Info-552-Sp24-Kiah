@@ -1,0 +1,96 @@
+/* =============
+    Projects
+============= */
+
+#projectsContainer {
+    width: 100%;
+    height: 445px;
+    display: flex;
+
+    .projectsLeftContainer {
+        width: 65%;
+        display: flex;
+        .p123 {
+            border: 1px black solid;
+            height: 300px;
+            width: 200px;
+            margin: 50px auto;
+            top: 50%;
+            left: 50%;
+            background-color: var(--purple);
+            text-align: center;
+        }
+        button {
+            cursor: pointer;
+            padding: 10px;
+            position: relative;
+            top: 20px;
+            font-weight: bold;
+            background-color: var(--grey);
+            border: none;
+            border-radius: 5px;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        p {
+            font-size: 12px;
+            margin: 5px 10px;
+            line-height: 1.3;
+        }
+        .projectOneContainer {
+            width: 33.333%;
+            height: 100%;
+            img {
+                height: 100px;
+                width: 100%;
+                background-color: var(--white);
+                object-fit: contain;
+            }
+        }
+        .projectTwoContainer {
+            width: 33.333%;
+            height: 100%;
+            img {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+        .projectThreeContainer {
+            width: 33.333%;
+            height: 100%;
+            img {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+    .projectsRightContainer {
+        width: 35%;
+        position: relative;
+        text-align: center;
+        img {
+            transform: rotate(-2deg);
+            opacity: 0.5;
+            height: 430px;
+            width: 430px;
+            object-fit: contain;
+        }
+        h2 {
+            font-size: 15px;
+            position: absolute;
+            top: 88px;
+            left: 112px;
+        }
+        .pDiv {
+            position: absolute;
+            top: 130px;
+            left: 155px;
+            line-height: 2;
+            p {
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+    }
+}
