@@ -2,6 +2,13 @@
     Navigation
 ============= */
 
+.hide-menu {
+    display: none;
+
+    @include lg {
+        display: inline-block;
+    }
+}
 header {
     width: 100%;
     background-color: var(--white);
@@ -48,99 +55,43 @@ header {
 
         #main-nav {
             grid-area: nav;
+            background-color: var(--purple);
+            color: var(--black);
+
+            @include lg {
+                background-color: var(--white);
+                display: inline-block;
+            }
+
+            ul {
+
+                @include lg {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                li {
+                    list-style-type: none;
+                    text-align: right;
+
+                    a:link, a:visited{
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        text-decoration: none;
+                        color: var(--black);
+                        padding: 8px 0;
+
+                        @include lg {
+                            color: var(--purple);
+                        }
+                        div {
+                            padding: 0 3px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
-
-
-
-
-// .navigationWelcome {
-//     font-family: "Pacifico", cursive;
-//     font-weight: 400;
-//     font-optical-sizing: auto;
-// }
-
-// .navigationBar {
-
-//     display: grid;
-//     grid-template-columns: 50% auto;
-//     grid-template-areas: 
-//     "navigationRightContainer burger-container"
-//     "navigationLeftContainer navigationLeftContainer";
-
-//     @include lg{
-//         grid-template-columns: 30% auto;
-//         grid-template-areas: 
-//         "navigationRightContainer navigationLeftContainer"
-//     }
-
-//     .navigationRightContainer {
-//         grid-area: navigationRightContainer;
-//     }
-
-//     .navigationLeftContainer {
-//         grid-area: navigationLeftContainer;
-//         display: none;
-
-//         @include lg{
-//             display: block;
-//         }
-
-//         ul{
-
-//             @include lg{
-//                 display: flex;
-//                 justify-content: flex-end;
-//             }
-
-//             li{
-//                 list-style-type: none;
-                
-//                 width: 100%;
-               
-
-//                 @include md{
-//                     margin-left: 24px;
-//                 }
-
-//                 a:link, a:visited{
-//                     display: flex;
-//                     justify-content: flex-end;
-//                     align-items: center;
-//                     text-decoration: none;
-//                     color: var(--purple);
-//                     padding: 8px 0;
-                   
-
-//                     img{
-//                         height: 20px;
-//                         margin-right: 8px;
-//                     }
-//                 }
-//             }
-//          }
-//     }
-
-//     .burger-container{
-//         grid-area: burger-container;
-//         display: flex;
-//         justify-content: flex-end;
-//         align-items: center;
-
-//         @include lg{
-//             display: none;
-//         }
-//         button{
-//             border: none;
-//             background-color: transparent;
-//             div{
-//                 background-color: black;
-//                 height: 3px;
-//                 width: 40px;
-//                 margin-bottom: 8px;
-//             }
-//         }
-        
-//     }
-// }

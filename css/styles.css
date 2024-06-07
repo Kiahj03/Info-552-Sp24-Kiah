@@ -354,12 +354,15 @@ body {
 }
 
 .contactContainer {
+  font-size: 30px;
+  padding: 15px 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-color: var(--white);
-  height: 70px;
+  color: var(--purple);
+  height: 50px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -367,9 +370,12 @@ body {
 .contactContainer ul {
   list-style-type: none;
 }
-.contactContainer li {
+.contactContainer ul li {
   display: inline;
   padding: 3px;
+}
+.contactContainer ul li i {
+  color: var(--purple);
 }
 
 /* =============
@@ -398,6 +404,15 @@ textarea {
 /* =============
     Navigation
 ============= */
+.hide-menu {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .hide-menu {
+    display: inline-block;
+  }
+}
+
 header {
   width: 100%;
   background-color: var(--white);
@@ -456,6 +471,8 @@ header #header-container #main-nav {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: nav;
+  background-color: var(--purple);
+  color: var(--black);
 }
 @media (min-width: 1024px) {
   header #header-container #welcome-container {
@@ -467,6 +484,51 @@ header #header-container #main-nav {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
   }
+}
+@media (min-width: 1024px) {
+  header #header-container #main-nav {
+    background-color: var(--white);
+    display: inline-block;
+  }
+}
+@media (min-width: 1024px) {
+  header #header-container #main-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+header #header-container #main-nav ul li {
+  list-style-type: none;
+  text-align: right;
+}
+header #header-container #main-nav ul li a:link, header #header-container #main-nav ul li a:visited {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: var(--black);
+  padding: 8px 0;
+}
+@media (min-width: 1024px) {
+  header #header-container #main-nav ul li a:link, header #header-container #main-nav ul li a:visited {
+    color: var(--purple);
+  }
+}
+header #header-container #main-nav ul li a:link div, header #header-container #main-nav ul li a:visited div {
+  padding: 0 3px;
 }
 
 /* =============

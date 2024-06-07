@@ -1,0 +1,38 @@
+/* =============
+    Typography
+============= */
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  background-color: var(--grey);
+}
+
+.contactContainer {
+  font-size: 30px;
+  padding: 15px 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: var(--white);
+  color: var(--purple);
+  height: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.contactContainer ul {
+  list-style-type: none;
+}
+.contactContainer ul li {
+  display: inline;
+  padding: 3px;
+}
+.contactContainer ul li i {
+  color: var(--purple);
+}
