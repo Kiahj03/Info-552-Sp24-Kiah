@@ -592,8 +592,8 @@ header {
   color: var(--purple);
 }
 #indexContainer #indexContent .indexLeftContainer p {
-  font-size: 15px;
-  line-height: 1.125rem;
+  font-size: 13px;
+  line-height: 1;
 }
 #indexContainer #indexContent .indexLeftContainer h3 {
   padding-top: 20px;
