@@ -622,30 +622,16 @@ header {
     Index
 ============= */
 #aboutContainer {
-  width: 100%;
+  max-width: 100%;
   height: 445px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-@media (min-width: 768px) {
-  #aboutContainer {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 60% auto;
-    grid-template-columns: 60% auto;
-        grid-template-areas: "Left Right";
-  }
-}
 #aboutContainer .aboutLeftContainer {
-  width: 35%;
+  max-width: 35%;
   margin-top: 50px;
   text-align: center;
-}
-@media (min-width: 768px) {
-  #aboutContainer .aboutLeftContainer {
-    grid-area: Right;
-  }
 }
 #aboutContainer .aboutLeftContainer img {
   width: 350px;
@@ -654,28 +640,13 @@ header {
      object-fit: contain;
 }
 #aboutContainer .aboutRightContainer {
-  width: 65%;
+  max-width: 65%;
   padding: 20px;
-}
-@media (min-width: 768px) {
-  #aboutContainer .aboutRightContainer {
-    grid-area: Left;
-  }
-}
-@media (min-width: 768px) {
-  #aboutContainer .aboutLeftContainer {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-  }
-  #aboutContainer .aboutRightContainer {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-  }
 }
 #aboutContainer .aboutRightContainer .textbox {
   background-color: var(--purple);
   height: 380px;
-  width: 650px;
+  width: 630px;
   border: 3px var(--purple) solid;
   -webkit-box-shadow: 10px 10px 5px var(--black);
           box-shadow: 10px 10px 5px var(--black);
@@ -696,7 +667,7 @@ header {
     Resume
 ============= */
 #resumeContainer {
-  width: 100%;
+  max-width: 100%;
   height: 445px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -747,7 +718,7 @@ header {
     Projects
 ============= */
 #projectsContainer {
-  width: 100%;
+  max-width: 100%;
   height: 445px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -817,7 +788,7 @@ header {
      object-fit: contain;
 }
 #projectsContainer .projectsRightContainer {
-  width: 35%;
+  max-width: 35%;
   position: relative;
   text-align: center;
 }
@@ -826,20 +797,20 @@ header {
           transform: rotate(-2deg);
   opacity: 0.5;
   height: 430px;
-  width: 430px;
+  width: 350px;
   -o-object-fit: contain;
      object-fit: contain;
 }
 #projectsContainer .projectsRightContainer h2 {
-  font-size: 15px;
+  font-size: 14px;
   position: absolute;
-  top: 88px;
-  left: 112px;
+  top: 80px;
+  left: 70px;
 }
 #projectsContainer .projectsRightContainer .pDiv {
   position: absolute;
-  top: 130px;
-  left: 155px;
+  top: 110px;
+  left: 105px;
   line-height: 2;
 }
 #projectsContainer .projectsRightContainer .pDiv p {
@@ -851,7 +822,7 @@ header {
     Associations
 ============= */
 #assocContainer {
-  width: 100%;
+  max-width: 100%;
   height: 445px;
 }
 #assocContainer h2 {
@@ -990,4 +961,155 @@ header {
   border-radius: 5px;
   margin-left: 220px;
   cursor: pointer;
+}
+
+/* =============
+    Hobbies
+============= */
+#content-container {
+  width: 50%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+  grid-template-columns: auto;
+      grid-template-areas: "nintendo" "lego" "music";
+}
+@media (min-width: 1024px) {
+  #content-container {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    grid-template-row: auto auto auto;
+        grid-template-areas: "nintendo lego music";
+  }
+}
+#content-container #text {
+  padding: 5px 5px;
+  border-radius: 10px;
+  background-color: var(--purple);
+}
+#content-container #nintendo-container {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: nintendo;
+  padding: 12px 0;
+}
+@media (min-width: 1024px) {
+  #content-container #nintendo-container {
+    padding: 20px;
+  }
+}
+#content-container #nintendo-container img {
+  text-align: center;
+  width: 70%;
+  height: 70%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#content-container #lego-container {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: lego;
+  padding: 12px 0;
+}
+@media (min-width: 1024px) {
+  #content-container #lego-container {
+    padding: 20px;
+  }
+}
+#content-container #lego-container img {
+  width: 70%;
+  height: 70%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#content-container #music-container {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: music;
+  padding: 12px 0;
+}
+@media (min-width: 1024px) {
+  #content-container #nintendo-container {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  #content-container #lego-container {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  #content-container #music-container {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+}
+@media (min-width: 1024px) {
+  #content-container #music-container {
+    padding: 20px;
+  }
+}
+#content-container #music-container img {
+  width: 70%;
+  height: 70%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+/* =============
+    Gallery
+============= */
+#gallery-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 16px auto 16px;
+  grid-template-columns: 16px auto 16px;
+      grid-template-areas: ". title .";
+}
+#gallery-container > div {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: title;
+}
+#gallery-container > div #gallery-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 200px 10px 200px 10px 200px 10px 200px 10px 200px 10px 200px;
+  grid-template-rows: repeat(6, 200px);
+  gap: 10px;
+      grid-template-areas: "gal1" "gal2" "gal3" "gal4" "gal5" "gal6";
+}
+#gallery-container > div #gallery-grid div {
+  width: 100%;
+  height: 100%;
+}
+#gallery-container > div #gallery-grid #gal1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: gal1;
+}
+#gallery-container > div #gallery-grid #gal2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: gal2;
+}
+#gallery-container > div #gallery-grid #gal3 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: gal3;
+}
+#gallery-container > div #gallery-grid #gal4 {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  grid-area: gal4;
+}
+#gallery-container > div #gallery-grid #gal5 {
+  -ms-grid-row: 9;
+  -ms-grid-column: 1;
+  grid-area: gal5;
+}
+#gallery-container > div #gallery-grid #gal6 {
+  -ms-grid-row: 11;
+  -ms-grid-column: 1;
+  grid-area: gal6;
 }

@@ -1,0 +1,69 @@
+/* =============
+    Hobbies
+============= */
+
+#content-container {
+    width: 50%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "nintendo"
+    "lego"
+    "music";
+
+    @include lg {
+        width: 100%;
+        display: grid;
+        grid-template-row: auto auto auto;
+        grid-template-areas: "nintendo lego music";
+    }
+
+    #text {
+        padding: 5px 5px;
+        border-radius: 10px;
+        background-color: var(--purple);
+    }
+
+    #nintendo-container {
+        grid-area: nintendo;
+        padding: 12px 0;
+        @include lg {
+            padding: 20px;
+        }
+
+        img {
+            text-align: center;
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+        }
+
+    }
+
+    #lego-container {
+        grid-area: lego;
+        padding: 12px 0;
+        @include lg {
+            padding: 20px;
+        }
+        img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+        }
+    }
+    
+    #music-container {
+        grid-area: music;
+        padding: 12px 0;
+        @include lg {
+            padding: 20px;
+        }
+        img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+        }
+    }
+}
