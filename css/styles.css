@@ -414,12 +414,13 @@ textarea {
 }
 
 header {
-  width: 100%;
+  max-width: 100%;
   background-color: var(--white);
 }
 header #header-container {
   display: -ms-grid;
   display: grid;
+  overflow-x: hidden;
   -ms-grid-columns: 50% auto;
   grid-template-columns: 50% auto;
       grid-template-areas: "welcome burger" "nav nav";
@@ -542,7 +543,7 @@ header {
     Index
 ============= */
 #indexContainer {
-  width: 100%;
+  max-width: 100%;
 }
 @media (min-width: 1024px) {
   #indexContainer {
@@ -627,10 +628,24 @@ header {
   display: -ms-flexbox;
   display: flex;
 }
+@media (min-width: 768px) {
+  #aboutContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 60% auto;
+    grid-template-columns: 60% auto;
+        grid-template-areas: "Left Right";
+  }
+}
 #aboutContainer .aboutLeftContainer {
   width: 35%;
   margin-top: 50px;
   text-align: center;
+}
+@media (min-width: 768px) {
+  #aboutContainer .aboutLeftContainer {
+    grid-area: Right;
+  }
 }
 #aboutContainer .aboutLeftContainer img {
   width: 350px;
@@ -641,6 +656,21 @@ header {
 #aboutContainer .aboutRightContainer {
   width: 65%;
   padding: 20px;
+}
+@media (min-width: 768px) {
+  #aboutContainer .aboutRightContainer {
+    grid-area: Left;
+  }
+}
+@media (min-width: 768px) {
+  #aboutContainer .aboutLeftContainer {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  #aboutContainer .aboutRightContainer {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
 }
 #aboutContainer .aboutRightContainer .textbox {
   background-color: var(--purple);

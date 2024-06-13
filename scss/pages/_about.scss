@@ -7,10 +7,21 @@
     height: 445px;
     display: flex;
 
+    @include md {
+        display: grid;
+        grid-template-columns: 60% auto;
+        grid-template-areas: "Left Right";
+    }
+
     .aboutLeftContainer {
         width: 35%;
         margin-top: 50px;
         text-align: center;
+
+        @include md {
+            grid-area: Right;
+        }
+
         img {
             width: 350px;
             height: 350px;
@@ -20,6 +31,11 @@
     .aboutRightContainer {
         width: 65%;
         padding: 20px;
+
+        @include md {
+            grid-area: Left;
+        }
+
         .textbox {
             background-color: var(--purple);
             height: 380px;

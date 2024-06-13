@@ -10,11 +10,12 @@
     }
 }
 header {
-    width: 100%;
+    max-width: 100%;
     background-color: var(--white);
 
     #header-container {
         display: grid;
+        overflow-x: hidden;
         grid-template-columns: 50% auto;
         grid-template-areas: 
         "welcome burger"
